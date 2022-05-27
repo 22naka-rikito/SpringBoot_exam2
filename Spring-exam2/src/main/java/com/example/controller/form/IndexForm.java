@@ -1,31 +1,22 @@
 package com.example.controller.form;
 
 public class IndexForm{
-	private String name;
-	private String productName;
-	private Integer productId;
+	private String loginId;
+	private String password;
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
 	}
 	
-	public String getName() {
-		return this.name;
+	public String getLoginId() {
+		return this.loginId;
 	}
 	
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
-	public String getProductName() {
-		return this.productName;
-	}
-	
-	public void setProductId(Integer productId) {
-		this.productId = productId;
-	}
-	
-	public Integer getProductId() {
-		return this.productId;
+	public String getPassword() {
+		return this.password;
 	}
 }

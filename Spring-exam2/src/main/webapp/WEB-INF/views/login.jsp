@@ -6,9 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>演習課題2 発展 top画面</title>
+<title>演習課題2 発展 ログイン画面</title>
 </head>
 <body>
-	<a href="login">始める</a>
+	<form:form action="menu" modelAttribute="index">
+		<p>ログインID:<form:input path="loginId" /></p>
+		<p>パスワード:<form:password path="password" /></p>
+		<form:button>送信</form:button>
+	</form:form>
 </body>
 </html>
