@@ -15,6 +15,12 @@ import com.example.entity.Product;
 public class BasicController {
     @RequestMapping("/index")
     public String index(@ModelAttribute("index") IndexForm form, Model model) {
+    	List<Product> list = new ArrayList<Product>(); 
+    	Product product1 = new Product(101, "鉛筆", 50);
+    	Product product2= new Product(102, "消しゴム", 100);
+    	list.add(product1);
+    	list.add(product2);
+    	model.addAttribute("list", list);
         return "index"; 
     }
     
@@ -27,7 +33,7 @@ public class BasicController {
     	list.add(product2);
     	
     	for (Product product : list) {
-    		if(form.getProductName().equals(product.getProductName())) {
+    		if(form.getProductId().equals(product.getProductId())) {
         		model.addAttribute("name", form.getName());
         		model.addAttribute("product", product);
         	}

@@ -11,7 +11,12 @@
 <body>
 	<form:form action="result" modelAttribute="index">
 		<p>名前:<form:input path="name" /></p>
-		<p>商品:<form:input path="productName" /></p>
+		<p>
+			商品:
+			<form:select path="productId">
+				<form:options items="${list}" itemLabel="productName" itemValue="productId" />
+			</form:select>
+		</p>
 		<form:button>送信</form:button>
 	</form:form>
 </body>
